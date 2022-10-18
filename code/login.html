@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大事件</title>
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <!-- 引入自定义css -->
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+    <!-- layui-main设置版心类名 -->
+    <div class="layui-main">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录界面 -->
+    <div class="loginpannel">
+        <!-- 后台管理系统logo盒子 -->
+        <div class="title-box"></div>
+        <!-- 登录界面盒子 -->
+        <div class="ipt-login">
+            <!-- 表单 -->
+            <form class="layui-form login" action="">
+                <!-- 账户行 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <!-- lay-verify="required"表单校验功能属性设置 required属性值意为必填项-->
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input lgn-username">
+                </div>
+                <!-- 密码行 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <!-- 3在密码表单写入校验规则pass -->
+                    <input type="password" name="title" required  lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input lgn-password">
+                </div>
+                <!-- 按钮 -->
+                <div class="layui-form-item">
+                    <!-- layui-btn-fluid表示占满一行 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit >登录</button>
+                </div>
+                <div class="layui-form-item btn-box"><a href="javascript:;" id="btn-login">去注册账户</a></div>
+                
+            </form>
+        </div>
+        <!-- 注册界面盒子 -->
+        <div class="ipt-reg">
+            <form class="layui-form reg" action="">
+                <!-- 账户行 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" name="text" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input username">
+                </div>
+                <!-- 密码行 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="password" required  lay-verify="required|pass" placeholder="请输入密码" autocomplete="off" class="layui-input pwd">
+                </div>
+                <!-- 确认密码行 -->
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" name="repassword" required  lay-verify="required|pass|repass" placeholder="再次确认密码" autocomplete="off" class="layui-input">
+                </div>
+                <!-- 按钮 -->
+                <div class="layui-form-item">
+                    <!-- layui-btn-fluid表示占满一行 -->
+                    <button class="layui-btn layui-btn-fluid layui-btn-normal" lay-submit >注册</button>
+                </div>
+                <div class="layui-form-item btn-box"><a href="javascript:;" id="btn-reg">去登录</a></div>
+                
+            </form>
+        </div>
+    </div>
+    <!-- 引入layui.js 引入后表单校验功能生效 -->
+    <script src="./assets/lib/layui/layui.all.js"></script>
+    <!-- 引入login.js -->
+    <script src="./assets/js/login.js"></script>
+</body>
+</html>
