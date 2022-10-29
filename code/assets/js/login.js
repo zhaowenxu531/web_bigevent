@@ -44,7 +44,7 @@ var layer = layui.layer
 form.addEventListener('submit',function(e){
     e.preventDefault()
     var xhr = new XMLHttpRequest()
-    xhr.open('post','http://www.liulongbin.top:3007/api/reguser')
+    xhr.open('post','http://api-breakingnews-web.itheima.net/api/reguser')
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send('username='+username.value+"&password="+pwd.value)
     xhr.onreadystatechange= function(){
@@ -73,7 +73,7 @@ var lgnpassword = document.querySelector('.lgn-password')
 lgn_form.addEventListener('submit',function(e){
     e.preventDefault()
     var xhr = new XMLHttpRequest()
-    xhr.open('post','http://www.liulongbin.top:3007/api/login')
+    xhr.open('post','http://api-breakingnews-web.itheima.net/api/login')
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.send('username='+lgnusername.value+"&password="+lgnpassword.value)
     xhr.onreadystatechange=function(){
